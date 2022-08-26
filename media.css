@@ -26,6 +26,7 @@
   .front {
     top: 50%;
     left: 50%;
+    z-index: 1001;
   }
   .num {
     font-size: 20px;
