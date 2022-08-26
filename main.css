@@ -1,0 +1,155 @@
+@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500&display=swap");
+*,
+::after,
+::before {
+  box-sizing: border-box;
+  margin: 0;
+  font-family: "Space Grotesk", sans-serif;
+}
+
+.num {
+  color: white;
+  grid-row: 2 / 2;
+  font-weight: 500;
+  margin: 0px;
+  justify-self: center;
+}
+.num,
+.name,
+.date {
+  align-self: center;
+}
+.name {
+  font-size: 18px;
+  justify-self: flex-start;
+  grid-row: 3/3;
+}
+
+.date {
+  justify-self: flex-end;
+  grid-row: 3/3;
+}
+.attribution {
+  font-size: 11px;
+  text-align: center;
+  position: absolute !important;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  border-bottom: 5px;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+.pic {
+  position: absolute;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+.front,
+.back {
+  z-index: 1000;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+}
+.front {
+  position: absolute;
+  background-image: url("./images/bg-card-front.png");
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 2fr 1fr 1fr;
+  padding: 15px;
+}
+.front span,
+.back span {
+  color: white;
+}
+
+.back {
+  position: absolute;
+  background-image: url("./images/bg-card-back.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  display: flex;
+  justify-content: flex-end;
+}
+.input,
+.confirm {
+  position: absolute;
+}
+.input {
+  display: flex;
+  flex-wrap: wrap;
+  justify-self: flex-start;
+  align-content: space-between;
+}
+.input input {
+  width: 100%;
+  height: 100%;
+  padding: 5px;
+  outline: none;
+  border: 2px solid #eee;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+}
+.input p,
+.input span,
+.input pre {
+  font-size: 0.8rem;
+}
+#mm,
+#yy {
+  width: 25%;
+  margin-top: 15px;
+}
+#cvv {
+  width: 50%;
+}
+.end {
+  width: 100%;
+  height: fit-content;
+}
+input[type="submit"] {
+  color: white;
+  font-size: 18px;
+  margin-top: 10px;
+  background-color: hsl(278, 68%, 11%);
+  border-radius: 6px;
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  -ms-border-radius: 6px;
+  -o-border-radius: 6px;
+  cursor: pointer;
+}
+.confirm {
+  display: none;
+  width: 235px;
+  height: 50px;
+  align-items: center;
+  justify-content: center;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr;
+  place-items: center;
+  gap: 10px;
+}
+.confirm input {
+  width: 100%;
+  height: 40px;
+}
+.confirm > p:first-of-type {
+  letter-spacing: 2px;
+  font-size: 18px;
+  text-transform: uppercase;
+  color: hsl(278, 68%, 11%);
+}
+.confirm > p:last-of-type {
+  color: gray;
+}

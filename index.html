@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <script defer src="./main.js"></script>
+    <title>Frontend Mentor | Interactive card details form</title>
+    <link rel="stylesheet" href="./main.css" />
+    <link rel="stylesheet" href="./media.css" />
+  </head>
+  <body>
+    <div class="pic">
+      <div class="front">
+        <img src="./images/card-logo.svg" alt="" />
+        <span class="num">0000 0000 0000 0000</span>
+        <span class="name">Jane Appleseed</span>
+        <span class="date"
+          ><span class="f">00</span>/<span class="ff">00</span></span
+        >
+      </div>
+      <div class="back"><span>000</span></div>
+    </div>
+    <form>
+      <div class="input">
+        <p>CARDHOLDER NAME</p>
+        <input type="text" placeholder="e.g. Jane Appleseed" id="name" />
+        <p>CARD NUMBER</p>
+        <input
+          id="num"
+          type="tel"
+          inputmode="numeric"
+          pattern="[0-9\s]{13,19}"
+          autocomplete="cc-number"
+          maxlength="19"
+          placeholder="e.g. 1234 5678 9123 0000"
+        />
+        <div class="end">
+          <pre>EXP. DATE (MM/YY)     CVC</pre>
+          <input
+            type="tel"
+            inputmode="numeric"
+            maxlength="2"
+            pattern="(^[0-1][0-2]$)|(^0[1-9]$)"
+            placeholder="MM"
+            id="mm"
+          /><input
+            type="tel"
+            inputmode="numeric"
+            maxlength="2"
+            placeholder="YY"
+            id="yy"
+          /><input
+            type="tel"
+            inputmode="numeric"
+            maxlength="3"
+            placeholder="e.g. 123"
+            id="cvv"
+          />
+        </div>
+        <input type="submit" value="Confirm" />
+      </div>
+    </form>
+    <div class="confirm">
+      <img src="./images/icon-complete.svg" />
+      <p class="thank">Thank you!</p>
+      <p>We've added your card details</p>
+      <input type="submit" value="Confirm" />
+    </div>
+    <div class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >. Coded by <a href="#">Yassin</a>.
+    </div>
+  </body>
+</html>
