@@ -20,25 +20,36 @@ cvv.value = "";
 input.oninput = () => {
   name1.textContent = input.value || "Jane Appleseed";
 };
+function logic(e, num) {
+  let retur = new RegExp(`(\d{${num}})`, "g");
+  return e.replace(/[A-Za-z]/g, "").replace(retur, "$1");
+}
 num.oninput = (e) => {
-  if (Number(num.value.replace(/\s/g, ""))) {
-    num1.textContent = num.value;
-  } else {
-    num1.textContent = "0000 0000 0000 0000";
-  }
   e.target.value = e.target.value
     .replace(/[^\dA-Z]/g, "")
-    .replace(/(.{4})/g, "$1 ")
+    .replace(/(\d{4})/g, "$1 ")
     .trim();
+  if (Number(e.target.value.replace(/\s/g, ""))) {
+    num1.textContent = e.target.value;
+  } else num1.textContent = "0000 0000 0000 0000";
 };
-mm.oninput = () => {
-  mm1.textContent = mm.value || "00";
+mm.oninput = (e) => {
+  e.target.value = logic(e.target.value, 2);
+  if (Number(e.target.value)) {
+    mm1.textContent = e.target.value;
+  } else mm1.textContent = e.target.value;
 };
-yy.oninput = () => {
-  mm2.textContent = yy.value || "00";
+yy.oninput = (e) => {
+  e.target.value = logic(e.target.value, 2);
+  if (Number(e.target.value)) {
+    span.textContent = e.target.value;
+  } else span.textContent = "00";
 };
-cvv.oninput = () => {
-  span.textContent = cvv.value || "000";
+cvv.oninput = (e) => {
+  e.target.value = logic(e.target.value, 3);
+  if (Number(e.target.value)) {
+    span.textContent = e.target.value;
+  } else span.textContent = "000";
 };
 inputs.forEach((i) => (i.required = true));
 form.onsubmit = (e) => {
