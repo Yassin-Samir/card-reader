@@ -14,11 +14,7 @@ const inputs = document.querySelectorAll("input");
 const form = document.querySelector("form");
 const con = document.querySelector(".con");
 input.addEventListener("focus", rotate);
-input.value = "";
-num.value = "";
-mm.value = "";
-yy.value = "";
-cvv.value = "";
+(input && num && mm && yy && cvv).value = "";
 input.oninput = () => {
   name1.textContent = input.value || "Jane Appleseed";
 };
