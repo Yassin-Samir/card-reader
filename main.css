@@ -6,7 +6,13 @@
   margin: 0;
   font-family: "Space Grotesk", sans-serif;
 }
-
+.input,
+.confirm,
+.back,
+.pic,
+.front {
+  position: absolute;
+}
 .num {
   color: white;
   grid-row: 2 / 2;
@@ -42,22 +48,21 @@
   color: hsl(228, 45%, 44%);
 }
 .pic {
-  position: absolute;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
 }
 .front,
 .back {
-  z-index: 1000;
   border-radius: 10px;
   -webkit-border-radius: 10px;
   -moz-border-radius: 10px;
   -ms-border-radius: 10px;
   -o-border-radius: 10px;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
 }
 .front {
-  position: absolute;
   background-image: url("./images/bg-card-front.png");
   display: grid;
   grid-template-columns: 1fr;
@@ -70,18 +75,19 @@
 }
 
 .back {
-  position: absolute;
   background-image: url("./images/bg-card-back.png");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
   display: flex;
   justify-content: flex-end;
+  transform: rotateY(180deg);
+  -webkit-transform: rotateY(180deg);
+  -moz-transform: rotateY(180deg);
+  -ms-transform: rotateY(180deg);
+  -o-transform: rotateY(180deg);
 }
-.input,
-.confirm {
-  position: absolute;
-}
+
 .input {
   display: flex;
   flex-wrap: wrap;
@@ -152,4 +158,14 @@ input[type="submit"] {
 }
 .confirm > p:last-of-type {
   color: gray;
+}
+
+.con {
+  position: relative;
+  transform-style: preserve-3d;
+  transition: transform 0.5s ease;
+  -webkit-transition: transform 0.5s ease;
+  -moz-transition: transform 0.5s ease;
+  -ms-transition: transform 0.5s ease;
+  -o-transition: transform 0.5s ease;
 }

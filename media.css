@@ -5,28 +5,25 @@
     height: 25%;
     top: 0;
   }
-  .front,
-  .back {
+  .con {
+    margin: 25px auto;
     width: 300px;
     height: 150px;
-    transform: translateX(-50%);
-    -webkit-transform: translateX(-50%);
-    -moz-transform: translateX(-50%);
-    -ms-transform: translateX(-50%);
-    -o-transform: translateX(-50%);
+  }
+  .front,
+  .back {
+    width: 100%;
+    height: 100%;
   }
   .back {
-    top: 3%;
-    left: 60%;
     padding: 65px 35px;
   }
   .back span {
     font-size: 12px;
   }
   .front {
-    top: 50%;
-    left: 50%;
-    z-index: 1001;
+    top: 0%;
+    left: 0%;
   }
   .num {
     font-size: 20px;
@@ -59,27 +56,25 @@
     width: 40%;
     height: 100vh;
   }
-  .front,
-  .back {
+  .con {
     width: 400px;
     height: 200px;
-    transform: translateX(0);
-    -webkit-transform: translateX(0);
-    -moz-transform: translateX(0);
-    -ms-transform: translateX(0);
-    -o-transform: translateX(0);
+    top: 35%;
+    left: 65%;
+    margin: 0;
+  }
+  .front,
+  .back {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
   }
   .back {
-    left: 60%;
-    top: 45%;
     padding: 85px 42px;
   }
   .back span {
     font-size: 18px;
-  }
-  .front {
-    top: 20%;
-    left: 50%;
   }
   .front img {
     height: initial;

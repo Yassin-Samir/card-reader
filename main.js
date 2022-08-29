@@ -12,6 +12,8 @@ const cvv = document.querySelector("#cvv");
 const span = document.querySelector(".back span");
 const inputs = document.querySelectorAll("input");
 const form = document.querySelector("form");
+const con = document.querySelector(".con");
+input.addEventListener("focus", rotate);
 input.value = "";
 num.value = "";
 mm.value = "";
@@ -20,10 +22,14 @@ cvv.value = "";
 input.oninput = () => {
   name1.textContent = input.value || "Jane Appleseed";
 };
+function rotate() {
+  con.style.transform = "rotateY(0deg)";
+}
 function logic(e, num) {
   let retur = new RegExp(`(\d{${num}})`, "g");
   return e.replace(/[A-Za-z]/g, "").replace(retur, "$1");
 }
+num.addEventListener("focus", rotate);
 num.oninput = (e) => {
   e.target.value = e.target.value
     .replace(/[^\dA-Z]/g, "")
@@ -33,18 +39,21 @@ num.oninput = (e) => {
     num1.textContent = e.target.value;
   } else num1.textContent = "0000 0000 0000 0000";
 };
+mm.addEventListener("focus", rotate);
 mm.oninput = (e) => {
   e.target.value = logic(e.target.value, 2);
   if (Number(e.target.value)) {
     mm1.textContent = e.target.value;
-  } else mm1.textContent = e.target.value;
+  } else mm1.textContent = "00";
 };
+yy.addEventListener("focus", rotate);
 yy.oninput = (e) => {
   e.target.value = logic(e.target.value, 2);
   if (Number(e.target.value)) {
-    span.textContent = e.target.value;
-  } else span.textContent = "00";
+    mm2.textContent = e.target.value;
+  } else mm2.textContent = "00";
 };
+cvv.addEventListener("focus", () => (con.style.transform = "rotateY(180deg)"));
 cvv.oninput = (e) => {
   e.target.value = logic(e.target.value, 3);
   if (Number(e.target.value)) {
