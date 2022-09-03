@@ -23,7 +23,7 @@ function logic(e, num) {
     var retur = new RegExp("(d{".concat(num, "})"), "g");
     return e.replace(/[A-Za-z]/g, "").replace(retur, "$1");
 }
-num.addEventListener("focus", rotate);
+(num && mm && yy && name1).addEventListener("focus", rotate);
 num.oninput = function (e) {
     e.target.value = e.target.value
         .replace(/[^\dA-Z]/g, "")
@@ -35,7 +35,6 @@ num.oninput = function (e) {
     else
         num1.textContent = "0000 0000 0000 0000";
 };
-mm.addEventListener("focus", rotate);
 mm.oninput = function (e) {
     e.target.value = logic(e.target.value, 2);
     if (Number(e.target.value)) {
@@ -44,7 +43,6 @@ mm.oninput = function (e) {
     else
         mm1.textContent = "00";
 };
-yy.addEventListener("focus", rotate);
 yy.oninput = function (e) {
     e.target.value = logic(e.target.value, 2);
     if (Number(e.target.value)) {
