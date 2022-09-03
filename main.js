@@ -22,8 +22,8 @@ function rotate() {
   con.style.transform = "rotateY(0deg)";
 }
 function logic(e, num) {
-  let retur = new RegExp(`(\d{${num}})`, "g");
-  return e.replace(/[A-Za-z]/g, "").replace(retur, "$1");
+  let return1 = new RegExp(`(\d{${num}})`, "g");
+  return e.replace(/[A-Za-z]/g, "").replace(return1, "$1");
 }
 num.addEventListener("focus", rotate);
 num.oninput = (e) => {
