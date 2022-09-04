@@ -1,7 +1,7 @@
 var main = document.querySelector(".input");
 var input = document.querySelector("#name");
 var name1 = document.querySelector(".name");
-var num = document === null || document === void 0 ? void 0 : document.getElementById("num");
+var num = document.getElementById("num");
 var num1 = document.querySelector(".num");
 var mm = document.querySelector("#mm");
 var mm1 = document.querySelector(".f");
@@ -9,7 +9,7 @@ var mm2 = document.querySelector(".ff");
 var yy = document.querySelector("#yy");
 var cvv = document.querySelector("#cvv");
 var span = document.querySelector(".back span");
-var inputs = document === null || document === void 0 ? void 0 : document.querySelectorAll("input");
+var inputs = document.querySelectorAll("input");
 var form = document.querySelector("form");
 var con = document.querySelector(".con");
 (input && num && mm && yy && cvv).value = "";

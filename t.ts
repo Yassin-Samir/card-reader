@@ -5,7 +5,7 @@ const input: HTMLInputElement = document.querySelector(
 const name1: HTMLSpanElement = document.querySelector(
   ".name"
 ) as HTMLSpanElement;
-const num: HTMLInputElement = document?.getElementById(
+const num: HTMLInputElement = document.getElementById(
   "num"
 ) as HTMLInputElement;
 const num1: HTMLSpanElement = document.querySelector(".num") as HTMLSpanElement;
@@ -19,7 +19,7 @@ const cvv: HTMLInputElement = document.querySelector(
 const span: HTMLSpanElement = document.querySelector(
   ".back span"
 ) as HTMLSpanElement;
-const inputs: NodeList = document?.querySelectorAll("input") as NodeList;
+const inputs: NodeList = document.querySelectorAll("input") as NodeList;
 const form: HTMLFormElement = document.querySelector("form") as HTMLFormElement;
 const con: HTMLDivElement = document.querySelector(".con") as HTMLDivElement;
 (input && num && mm && yy && cvv).value = "";
